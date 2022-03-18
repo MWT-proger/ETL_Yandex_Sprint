@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag mwtechdocker/etl:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/etl
+      run: docker push ${{secrets.DOCKER_USER}}/etl:$(date +%s)
